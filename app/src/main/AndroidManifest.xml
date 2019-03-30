@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="uk.aber.ac.atc">
+    <!-- To auto-complete the email text field in the login form with the user's emails -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".User"></activity>
+        <activity android:name=".Cart" />
+        <activity android:name=".AddProduct" />
+        <activity android:name=".Product_Category" />
+        <activity
+            android:name=".HorizontalNav"
+            android:label="@string/title_activity_horizontal_nav"
+            android:parentActivityName=".Home_buyer"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="uk.aber.ac.atc.Home_buyer" />
+        </activity>
+        <activity
+            android:name=".Home_buyer"
+            android:label="@string/title_activity_home_buyer"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".Log_In_buyer" />
+        <activity android:name=".register_buyer" />
+        <activity android:name=".authentication_buyer" />
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
